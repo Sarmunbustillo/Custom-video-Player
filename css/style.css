@@ -48,9 +48,16 @@ body {
   border: 0;
   background: transparent;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.controls .btn:hover {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
-#play span {
+#play .play-icon {
   display: inline-block;
   width: 0;
   height: 0;
@@ -58,6 +65,31 @@ body {
   border-bottom: 9px solid transparent;
   border-left: 14px solid var(--play);
 }
+.pause-icon {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+.pause-icon::before {
+  position: absolute;
+  content: '';
+  top: 0%;
+  left: 0%;
+  width: 38%;
+  height: 100%;
+  background-color: var(--white);
+}
+.pause-icon:after {
+  position: absolute;
+  content: '';
+  top: 0%;
+  right: 0%;
+  width: 38%;
+  height: 100%;
+  background-color: var(--white);
+}
+
 #stop span {
   display: inline-block;
   width: 14px;
