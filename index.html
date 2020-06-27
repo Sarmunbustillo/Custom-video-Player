@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" class="css" />
+    <link rel="stylesheet" href="css/progress.css" class="css" />
+    <title>Custom Video Player</title>
+  </head>
+  <body>
+    <h1>Custom Video Player</h1>
+    <video src="videos/gone.mp4" id="video" class="screen" poster="img/poster.png"></video>
+    <div class="controls">
+      <button class="btn" id="play">
+        <span role="button"></span>
+      </button>
+      <button class="btn" id="stop">
+        <span role="button"></span>
+      </button>
+
+      <input
+        role="slider"
+        type="range"
+        name="progress"
+        id="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+      />
+      <span class="timestamp" id="timestamp">00:00</span>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
